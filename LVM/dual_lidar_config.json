@@ -1,0 +1,32 @@
+{
+    "project": "MLFF LVM S2M1",
+    "configuration_version": 1,
+    "lidar_model": "SLAMTEC RPLIDAR S2E",
+    "network": {
+        "pc_ip": "192.168.11.54",
+        "protocol": "UDP",
+        "destination_port": 8089
+    },
+    "lidars": {
+        "L1": {
+            "ip": "192.168.11.2",
+            "orientation": "horizontal",
+            "mounting_status": "stationary"
+        },
+        "L2": {
+            "ip": "192.168.11.3",
+            "orientation": "horizontal",
+            "mounting_status": "stationary"
+        }
+    },
+    "initial_test": {
+        "measurement_mode": "both_lidars_horizontal",
+        "capture_duration_seconds": 60,
+        "purpose": "Capture and compare horizontal point clouds from both stationary LiDARs"
+    },
+    "notes": [
+        "Both LiDARs are configured for horizontal measurement in the initial test.",
+        "Physical right/left assignment is not specified in this file.",
+        "Verify the LiDAR IP addresses and UDP destination port against the device/network settings before acquisition."
+    ]
+}
